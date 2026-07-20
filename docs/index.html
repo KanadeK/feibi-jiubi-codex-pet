@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="菲比啾比，九种原生状态的 Codex Desktop 桌面宠物。">
+    <meta name="theme-color" content="#f4f7ff" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#111522" media="(prefers-color-scheme: dark)">
+    <meta property="og:title" content="菲比啾比 Codex Pet">
+    <meta property="og:description" content="让菲比啾比陪你奔跑、等待、庆祝和交付。">
+    <meta property="og:image" content="https://kanadek.github.io/feibi-jiubi-codex-pet/media/preview.png">
+    <meta property="og:type" content="website">
+    <title>菲比啾比 Codex Pet</title>
+    <link rel="preload" as="image" href="media/actions/idle.gif">
+    <link rel="stylesheet" href="site.css">
+    <script src="site.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">跳到主要内容</a>
+
+    <header class="site-header">
+      <nav class="nav-shell" aria-label="主导航">
+        <a class="brand" href="#top" aria-label="菲比啾比首页">
+          <span class="brand-mark" aria-hidden="true">啾</span>
+          <span>菲比啾比</span>
+        </a>
+        <div class="nav-links">
+          <a href="#actions">动作</a>
+          <a href="#install">安装</a>
+          <a href="https://github.com/KanadeK/feibi-jiubi-codex-pet">GitHub</a>
+        </div>
+      </nav>
+    </header>
+
+    <main id="main">
+      <section class="hero section-shell" id="top">
+        <div class="hero-copy reveal">
+          <p class="hero-label">Codex Desktop 原生宠物</p>
+          <h1>让菲比啾比陪你写代码</h1>
+          <p class="hero-text">九种状态，随 Codex 一起奔跑、等待、庆祝和交付。</p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="codex://pets/install?name=%E8%8F%B2%E6%AF%94%E5%95%BE%E6%AF%94&amp;imageUrl=https%3A%2F%2Fraw.githubusercontent.com%2FKanadeK%2Ffeibi-jiubi-codex-pet%2Fmain%2Fpet%2Fspritesheet.webp&amp;spriteVersionNumber=2">在 Codex 中安装</a>
+            <a class="button button-secondary" href="https://github.com/KanadeK/feibi-jiubi-codex-pet">查看源码</a>
+          </div>
+        </div>
+
+        <div class="hero-visual reveal" data-delay="1">
+          <div class="pet-stage">
+            <img
+              src="media/actions/idle.gif"
+              data-still="media/hero.png"
+              width="192"
+              height="208"
+              alt="菲比啾比空闲陪伴动画"
+              decoding="async"
+              fetchpriority="high"
+            >
+          </div>
+          <p class="pet-caption">透明图集，直接跟随 Codex 状态</p>
+        </div>
+      </section>
+
+      <section class="actions-section section-shell" id="actions">
+        <div class="section-heading reveal">
+          <h2>每种状态，都有回应</h2>
+          <p>不是一张静态贴纸。她会读懂当前任务阶段，用动作陪你完成一次完整工作流。</p>
+        </div>
+
+        <div class="action-grid">
+          <article class="action-card action-card-feature reveal">
+            <img src="media/actions/idle.gif" data-still="media/actions/idle.png" width="192" height="208" loading="lazy" alt="菲比啾比空闲呼吸">
+            <div><h3>空闲陪伴</h3><p>轻轻呼吸，安静待在桌边。</p></div>
+          </article>
+          <article class="action-card reveal" data-delay="1">
+            <img src="media/actions/running-right.gif" data-still="media/actions/running-right.png" width="192" height="208" loading="lazy" alt="菲比啾比向右奔跑">
+            <div><h3>向右奔跑</h3><p>移动到新的工作位置。</p></div>
+          </article>
+          <article class="action-card reveal" data-delay="2">
+            <img src="media/actions/running-left.gif" data-still="media/actions/running-left.png" width="192" height="208" loading="lazy" alt="菲比啾比向左奔跑">
+            <div><h3>向左奔跑</h3><p>方向正确，步伐也正确。</p></div>
+          </article>
+          <article class="action-card reveal">
+            <img src="media/actions/waving.gif" data-still="media/actions/waving.png" width="192" height="208" loading="lazy" alt="菲比啾比挥手问候">
+            <div><h3>挥手问候</h3><p>被唤醒时先认真打招呼。</p></div>
+          </article>
+          <article class="action-card reveal" data-delay="1">
+            <img src="media/actions/jumping.gif" data-still="media/actions/jumping.png" width="192" height="208" loading="lazy" alt="菲比啾比开心跳跃">
+            <div><h3>开心跳跃</h3><p>阶段完成，值得庆祝一下。</p></div>
+          </article>
+          <article class="action-card action-card-alert reveal" data-delay="2">
+            <img src="media/actions/failed.gif" data-still="media/actions/failed.png" width="192" height="208" loading="lazy" alt="菲比啾比任务受阻">
+            <div><h3>任务受阻</h3><p>错误出现时，她也会着急。</p></div>
+          </article>
+          <article class="action-card reveal">
+            <img src="media/actions/waiting.gif" data-still="media/actions/waiting.png" width="192" height="208" loading="lazy" alt="菲比啾比等待用户回复">
+            <div><h3>等你回复</h3><p>需要决定时，坐好等你。</p></div>
+          </article>
+          <article class="action-card action-card-wide reveal" data-delay="1">
+            <img src="media/actions/running.gif" data-still="media/actions/running.png" width="192" height="208" loading="lazy" alt="菲比啾比使用笔记本工作">
+            <div><h3>忙碌工作</h3><p>打开小电脑，和 Codex 一起处理任务。</p></div>
+          </article>
+          <article class="action-card reveal" data-delay="2">
+            <img src="media/actions/review.gif" data-still="media/actions/review.png" width="192" height="208" loading="lazy" alt="菲比啾比展示完成结果">
+            <div><h3>等你验收</h3><p>结果准备好，递到你面前。</p></div>
+          </article>
+        </div>
+      </section>
+
+      <section class="install-section" id="install">
+        <div class="section-shell install-layout">
+          <div class="install-copy reveal">
+            <h2>两分钟，让她住进 Codex</h2>
+            <p>图集符合官方 1536 × 1872 透明 WebP 规格，并附带 SHA-256 校验。</p>
+            <a class="button button-primary" href="codex://pets/install?name=%E8%8F%B2%E6%AF%94%E5%95%BE%E6%AF%94&amp;imageUrl=https%3A%2F%2Fraw.githubusercontent.com%2FKanadeK%2Ffeibi-jiubi-codex-pet%2Fmain%2Fpet%2Fspritesheet.webp&amp;spriteVersionNumber=2">在 Codex 中安装</a>
+          </div>
+
+          <div class="install-steps reveal" data-delay="1">
+            <div class="install-step">
+              <strong>Windows</strong>
+              <code>irm https://raw.githubusercontent.com/KanadeK/feibi-jiubi-codex-pet/main/scripts/install.ps1 | iex</code>
+            </div>
+            <div class="install-step">
+              <strong>macOS / Linux</strong>
+              <code>curl -fsSL https://raw.githubusercontent.com/KanadeK/feibi-jiubi-codex-pet/main/scripts/install.sh | sh</code>
+            </div>
+            <p class="install-note">安装完成后，在 Settings &gt; Pets 中刷新并选择“菲比啾比”。</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="open-section section-shell">
+        <div class="open-visual reveal">
+          <img src="media/preview.png" width="576" height="624" loading="lazy" alt="菲比啾比九种动作姿势预览">
+        </div>
+        <div class="open-copy reveal" data-delay="1">
+          <h2>素材、构建、校验，全都公开</h2>
+          <p>仓库包含生成提示词、透明姿势板、可复现构建脚本、逐格验证器、测试和安装器。</p>
+          <dl class="spec-list">
+            <div><dt>图集</dt><dd>1536 × 1872</dd></div>
+            <div><dt>网格</dt><dd>8 × 9</dd></div>
+            <div><dt>动作</dt><dd>9 种</dd></div>
+            <div><dt>代码许可</dt><dd>MIT</dd></div>
+          </dl>
+          <a class="text-link" href="https://github.com/KanadeK/feibi-jiubi-codex-pet">阅读构建说明</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="section-shell footer-layout">
+        <p>非官方、非商业同人项目。未分发原作游戏素材。</p>
+        <div>
+          <a href="https://github.com/KanadeK/feibi-jiubi-codex-pet/blob/main/NOTICE.md">版权说明</a>
+          <a href="https://learn.chatgpt.com/docs/pets">Codex Pets 文档</a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
