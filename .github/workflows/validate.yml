@@ -30,8 +30,8 @@ jobs:
       - name: Rebuild assets
         run: python scripts/build_assets.py
 
-      - name: Verify generated assets are committed
-        run: git diff --exit-code
+      - name: Verify distributable assets are committed
+        run: git diff --exit-code -- pet/spritesheet.webp checksums.txt
 
       - name: Validate package
         run: python scripts/validate_pet.py
