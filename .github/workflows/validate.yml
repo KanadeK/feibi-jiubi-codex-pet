@@ -24,8 +24,14 @@ jobs:
       - name: Install dependencies
         run: python -m pip install -r requirements-dev.txt
 
+      - name: Verify committed checksums
+        run: sha256sum --check checksums.txt
+
       - name: Rebuild assets
         run: python scripts/build_assets.py
+
+      - name: Verify generated assets are committed
+        run: git diff --exit-code
 
       - name: Validate package
         run: python scripts/validate_pet.py

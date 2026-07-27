@@ -10,15 +10,22 @@ target="${pets_root}/${pet_id}"
 backup_root="${codex_root}/pet-backups"
 stage="$(mktemp -d "${TMPDIR:-/tmp}/feibi-jiubi.XXXXXX")"
 raw_root="https://raw.githubusercontent.com/${repository}/${ref}"
+source_root="${FEIBI_JIUBI_SOURCE_ROOT:-}"
 
 cleanup() {
   rm -rf "${stage}"
 }
 trap cleanup EXIT INT TERM
 
-curl -fsSL "${raw_root}/pet/pet.json" -o "${stage}/pet.json"
-curl -fsSL "${raw_root}/pet/spritesheet.webp" -o "${stage}/spritesheet.webp"
-curl -fsSL "${raw_root}/checksums.txt" -o "${stage}/checksums.txt"
+if [ -n "${source_root}" ]; then
+  cp "${source_root}/pet/pet.json" "${stage}/pet.json"
+  cp "${source_root}/pet/spritesheet.webp" "${stage}/spritesheet.webp"
+  cp "${source_root}/checksums.txt" "${stage}/checksums.txt"
+else
+  curl -fsSL "${raw_root}/pet/pet.json" -o "${stage}/pet.json"
+  curl -fsSL "${raw_root}/pet/spritesheet.webp" -o "${stage}/spritesheet.webp"
+  curl -fsSL "${raw_root}/checksums.txt" -o "${stage}/checksums.txt"
+fi
 
 expected_json="$(awk '$2 == "pet/pet.json" { print $1 }' "${stage}/checksums.txt")"
 expected_sheet="$(awk '$2 == "pet/spritesheet.webp" { print $1 }' "${stage}/checksums.txt")"

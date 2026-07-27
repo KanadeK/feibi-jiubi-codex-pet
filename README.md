@@ -18,7 +18,7 @@
 
 ### 一键打开 Codex 安装页
 
-[在 Codex 中安装菲比啾比](codex://pets/install?name=%E8%8F%B2%E6%AF%94%E5%95%BE%E6%AF%94&imageUrl=https%3A%2F%2Fraw.githubusercontent.com%2FKanadeK%2Ffeibi-jiubi-codex-pet%2Fmain%2Fpet%2Fspritesheet.webp&spriteVersionNumber=2)
+[在 Codex 中安装菲比啾比](codex://pets/install?name=%E8%8F%B2%E6%AF%94%E5%95%BE%E6%AF%94&imageUrl=https%3A%2F%2Fraw.githubusercontent.com%2FKanadeK%2Ffeibi-jiubi-codex-pet%2Fmain%2Fpet%2Fspritesheet.webp&spriteVersionNumber=1)
 
 如果浏览器不允许打开 `codex://` 链接，可使用下列脚本或手动安装。
 
@@ -68,7 +68,7 @@ pet/spritesheet.webp
 - 单格：`192 × 208`
 - 背景：透明 RGBA
 - 元数据：`pet.json`
-- Sprite 版本：`2`
+- Sprite 版本：`1`
 - 文件大小：小于官方 20 MiB 上传限制
 
 `scripts/validate_pet.py` 会逐格检查已用帧、空白帧、透明度、尺寸、文件类型和元数据。
